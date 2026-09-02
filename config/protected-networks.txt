@@ -1,0 +1,20 @@
+# DCK networks that must never be published in the hard denylist.
+# Canonical CIDRs are used here. Google official ranges are added dynamically
+# from dck-google-ipranges-relay at build time.
+
+# DigiCompKala origin
+109.122.250.68/32
+
+# Emalls
+46.245.89.80/28
+
+# Torob
+81.12.31.192/27
+81.12.31.224/28
+81.12.31.240/29
+81.12.31.248/30
+81.12.31.252/31
+81.12.31.254/32
+91.107.165.81/32
+195.201.30.135/32
+188.121.119.29/32
