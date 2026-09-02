@@ -1,0 +1,90 @@
+name: Update DCK threat denylist
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 * * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/build_denylist.py"
+      - "config/protected-networks.txt"
+      - ".github/workflows/update-threat-denylist.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dck-threat-denylist-update
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build denylist
+        run: python scripts/build_denylist.py
+
+      - name: Validate outputs
+        run: |
+          python - <<'PY'
+          import ipaddress
+          import json
+          from pathlib import Path
+
+          v4 = Path("dist/dck-hard-deny-v4.txt")
+          v6 = Path("dist/dck-hard-deny-v6.txt")
+          report = Path("dist/dck-threat-report.json")
+
+          for p in (v4, v6, report):
+              if not p.is_file():
+                  raise SystemExit(f"missing output: {p}")
+
+          v4_lines = [x.strip() for x in v4.read_text().splitlines() if x.strip()]
+          v6_lines = [x.strip() for x in v6.read_text().splitlines() if x.strip()]
+
+          if len(v4_lines) < 1000:
+              raise SystemExit("IPv4 denylist unexpectedly small")
+
+          for x in v4_lines:
+              n = ipaddress.ip_network(x, strict=False)
+              if n.version != 4 or not n.is_global:
+                  raise SystemExit(f"bad IPv4 network: {x}")
+
+          for x in v6_lines:
+              n = ipaddress.ip_network(x, strict=False)
+              if n.version != 6 or not n.is_global:
+                  raise SystemExit(f"bad IPv6 network: {x}")
+
+          data = json.loads(report.read_text())
+          if data.get("counts", {}).get("final_ipv4_networks") != len(v4_lines):
+              raise SystemExit("report IPv4 count mismatch")
+
+          print("VALIDATION=OK")
+          print(f"IPV4={len(v4_lines)}")
+          print(f"IPV6={len(v6_lines)}")
+          PY
+
+      - name: Commit outputs only when changed
+        run: |
+          if [ -z "$(git status --porcelain -- dist/)" ]; then
+            echo "DENYLIST_CHANGE=NO"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git commit -m "Update DCK threat denylist"
+          git push
