@@ -1,15 +1,15 @@
 {
   "counts": {
     "excluded_due_to_protection": 0,
-    "final_ipv4_networks": 14962,
-    "final_ipv6_networks": 76,
+    "final_ipv4_networks": 14969,
+    "final_ipv6_networks": 80,
     "protected_networks": 194,
-    "raw_unique_networks": 26492
+    "raw_unique_networks": 26504
   },
-  "generated_at": "2026-09-05T07:27:14Z",
+  "generated_at": "2026-09-05T08:28:23Z",
   "outputs": {
-    "dck-hard-deny-v4.txt": "056486b907e3f22bfe02e85d061b3567f1ff1c62f8e91fa24c801d21e484cb77",
-    "dck-hard-deny-v6.txt": "650b2a9c278be0ac9d0443bd8ff903b72bb69aedd78c31f2a303aa1c1952333d"
+    "dck-hard-deny-v4.txt": "92166a47bfacfec86425ed284146b846ec012525cb07f3a85875244d222d7c94",
+    "dck-hard-deny-v6.txt": "f7783ed4d3046528a442ed3acdc8184895c5fe77c124b2fa2189a936acd12bb5"
   },
   "policy": {
     "google_excluded": true,
@@ -21,13 +21,13 @@
   "schema_version": 1,
   "sources": {
     "blocklist_de_apache": {
-      "count": 9872,
-      "sha256": "fba9a0bea0abd34b786e9089441213cb7663cd5b49b28b8176291e1fd1708963",
+      "count": 9882,
+      "sha256": "70907f6f62a199a51050dd74024e4e648b307e2999164ae87fbd82d476e6f61d",
       "url": "https://lists.blocklist.de/lists/apache.txt"
     },
     "blocklist_de_bruteforce": {
-      "count": 1185,
-      "sha256": "0a21fbdc225adf27a2f4b5685792b8a8a9bd01b147764c1f7bae985922b0d695",
+      "count": 1181,
+      "sha256": "16a4f0417fc11a37059c796e6e43bb1b31425f0159dcf2597568d472c3db07ce",
       "url": "https://lists.blocklist.de/lists/bruteforcelogin.txt"
     },
     "blocklist_de_strongips": {
