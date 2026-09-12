@@ -1,14 +1,14 @@
 {
   "counts": {
     "excluded_due_to_protection": 6,
-    "final_ipv4_networks": 14891,
+    "final_ipv4_networks": 14883,
     "final_ipv6_networks": 79,
     "protected_networks": 194,
-    "raw_unique_networks": 26639
+    "raw_unique_networks": 26604
   },
-  "generated_at": "2026-09-12T20:30:39Z",
+  "generated_at": "2026-09-12T21:28:13Z",
   "outputs": {
-    "dck-hard-deny-v4.txt": "5caf152b81769886100522efb9ba93b1f530ca846433eb63a786e8c2d4ffe1bf",
+    "dck-hard-deny-v4.txt": "6989de1a4e58c3362225799fa514645e410045595a3fb8684effcfb1e652c384",
     "dck-hard-deny-v6.txt": "1ca66ece245aaf2a463c57bee339c0a806b1f032edcccef995795df38807d357"
   },
   "policy": {
@@ -21,13 +21,13 @@
   "schema_version": 1,
   "sources": {
     "blocklist_de_apache": {
-      "count": 9811,
-      "sha256": "c194e62427f78f14cc702e8e3861b0f6fbd16ba337666fdd547db313c24f0c58",
+      "count": 9772,
+      "sha256": "22aba613717b2e17f5992f09d4375bfb112aaec7907cb863b28eda212df6b196",
       "url": "https://lists.blocklist.de/lists/apache.txt"
     },
     "blocklist_de_bruteforce": {
-      "count": 1198,
-      "sha256": "6cc3ae4dd0cf74de0d1ae5ab8e17d61237addb7a50db89d1002833b0dfe6c707",
+      "count": 1156,
+      "sha256": "fec8f638884fd99e012d75daedce62f4ba91fe92f9e4a627647056ebc97a674b",
       "url": "https://lists.blocklist.de/lists/bruteforcelogin.txt"
     },
     "blocklist_de_strongips": {
