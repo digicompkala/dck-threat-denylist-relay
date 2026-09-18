@@ -1,15 +1,15 @@
 {
   "counts": {
-    "excluded_due_to_protection": 8,
-    "final_ipv4_networks": 16723,
-    "final_ipv6_networks": 117,
+    "excluded_due_to_protection": 6,
+    "final_ipv4_networks": 14894,
+    "final_ipv6_networks": 116,
     "protected_networks": 194,
-    "raw_unique_networks": 29226
+    "raw_unique_networks": 27922
   },
-  "generated_at": "2026-09-18T00:36:09Z",
+  "generated_at": "2026-09-18T01:28:04Z",
   "outputs": {
-    "dck-hard-deny-v4.txt": "42346a2afad69c92ff30099b0b94901fdc19b4ac8015494453456b6868826c84",
-    "dck-hard-deny-v6.txt": "0f85430cecee82fe33f1a1a907d6a1944415b2da9ec6c9551bbe4abaab1a3d43"
+    "dck-hard-deny-v4.txt": "3b8f7b16ab99d16ab2a322ff06ec4d7e5b7c3f3a3d209329ddbc826522f3cfae",
+    "dck-hard-deny-v6.txt": "118eaaeff6a266e1bb48402769199914dc44354dadf5259e43789c33ddc8cea9"
   },
   "policy": {
     "google_excluded": true,
@@ -21,13 +21,13 @@
   "schema_version": 1,
   "sources": {
     "blocklist_de_apache": {
-      "count": 10368,
-      "sha256": "f251ff4652fd7ba93d6a7d87992a59fe8707ba24e0f879030ff8f1256e7cb7ab",
+      "count": 10349,
+      "sha256": "1e40a6d8ce496d44c7fece1b7ce99adecee48f97ecd21e0b2137261da9f3f19a",
       "url": "https://lists.blocklist.de/lists/apache.txt"
     },
     "blocklist_de_bruteforce": {
-      "count": 1748,
-      "sha256": "216bf1c9831ae2164434ebcf0cde211122a158508a0431ee8218a3624368c3ec",
+      "count": 1752,
+      "sha256": "adac5480fac3d923612730a56b25de0c8dedaff3e5b507c23aabbd74bb2fcced",
       "url": "https://lists.blocklist.de/lists/bruteforcelogin.txt"
     },
     "blocklist_de_strongips": {
@@ -36,8 +36,8 @@
       "url": "https://lists.blocklist.de/lists/strongips.txt"
     },
     "ipsum_level3": {
-      "count": 18924,
-      "sha256": "b5516ee6d83023ecf564bf9892f227d0594e5e8abcb7e97e6964e2cb55b50dd9",
+      "count": 17745,
+      "sha256": "b2180e0ba522a245b84770f8826b37a9c355e777d25bad54d10929b91d9efe1f",
       "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt"
     }
   }
