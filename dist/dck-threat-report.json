@@ -1,15 +1,15 @@
 {
   "counts": {
     "excluded_due_to_protection": 10,
-    "final_ipv4_networks": 14704,
-    "final_ipv6_networks": 184,
+    "final_ipv4_networks": 14155,
+    "final_ipv6_networks": 182,
     "protected_networks": 196,
-    "raw_unique_networks": 28425
+    "raw_unique_networks": 27857
   },
-  "generated_at": "2026-10-15T23:06:52Z",
+  "generated_at": "2026-10-16T01:26:29Z",
   "outputs": {
-    "dck-hard-deny-v4.txt": "417b910d0a100886c6c62f5a10af1a70a19af848e60923518d1151dd64b71759",
-    "dck-hard-deny-v6.txt": "b8e1f362d5688aa6524a9074641aa7212dec00a229da8ef4d09dae792954f96e"
+    "dck-hard-deny-v4.txt": "e7682163c237e74c3101e051789957c83508e01ac9e9859949f30affd7254385",
+    "dck-hard-deny-v6.txt": "14096a0533024ebc68a75b2a8d86cd667058b86fa64254d989e3a3baee2ed43c"
   },
   "policy": {
     "google_excluded": true,
@@ -21,23 +21,23 @@
   "schema_version": 1,
   "sources": {
     "blocklist_de_apache": {
-      "count": 9809,
-      "sha256": "c1ca12038da0b8ceec5b0cf65288795072e6dff6e4a3c457df49d3282f95fdad",
+      "count": 9818,
+      "sha256": "33dbf441744faf1eafa5118ff34c3294b543d77a9a54deb9381b38330794f19b",
       "url": "https://lists.blocklist.de/lists/apache.txt"
     },
     "blocklist_de_bruteforce": {
-      "count": 1369,
-      "sha256": "04bcd67ace70435a42072c39e8f5be5cb2923f0bdb44719be3b379d7220ab6a8",
+      "count": 1372,
+      "sha256": "17e7ab7b5d144b4665fe51b4be334d32302b2d05d2e914060ef628e2627f7a30",
       "url": "https://lists.blocklist.de/lists/bruteforcelogin.txt"
     },
     "blocklist_de_strongips": {
-      "count": 245,
-      "sha256": "c41ed39d0a0aef7f2049ac1f2ae0c6016cea618f8a2b8ff7c92f783c0b075c00",
+      "count": 246,
+      "sha256": "61aa9e81e6ab6ead81b72ed0e6431f55a588477fb750717c5983d1fec72d1d81",
       "url": "https://lists.blocklist.de/lists/strongips.txt"
     },
     "ipsum_level3": {
-      "count": 18892,
-      "sha256": "b7d3a2a0724b750addef2bac2d1d3490e9e9c0ececb18792e9ad2ed6bede9e8c",
+      "count": 18347,
+      "sha256": "f4195a581d6a1f4142ca3d2d7fa28857b2b5869caf1f583387f2adc22bf0886b",
       "url": "https://raw.githubusercontent.com/stamparm/ipsum/master/levels/3.txt"
     }
   }
